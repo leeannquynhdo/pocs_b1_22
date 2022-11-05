@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/upperVerticalShim"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="200dp"
+        android:visibility="invisible" />
+    <TextView
+        android:id="@+id/sc_time_presentation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/sc_progress"
+        android:layout_centerHorizontal="true"
+        android:text="@string/sc_progress_text"
+        android:textSize="24sp"/>
+
+    <ProgressBar
+        android:id="@+id/sc_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@id/upperVerticalShim"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sc_progress"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:id="@+id/sc_motivator"/>
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <View
+        android:id="@+id/lowerVerticalShim"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="450dp"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/upperVerticalShim"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="130dp"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/centerHorizontalShim"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/fb_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/sc_button"
+        android:layout_toLeftOf="@+id/centerHorizontalShim"
+        android:gravity="center"
+        android:scaleType="centerInside"
+        android:src="@drawable/facebook" />
+
+    <ImageButton
+        android:id="@+id/ig_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/tt_button"
+        android:layout_toRightOf="@+id/centerHorizontalShim"
+        android:src="@drawable/instagram"
+        android:scaleType="centerInside"
+        android:gravity="center"/>
+
+    <ImageButton
+        android:id="@+id/sc_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/lowerVerticalShim"
+        android:layout_toLeftOf="@+id/centerHorizontalShim"
+        android:src="@drawable/snapchat"
+        android:scaleType="centerInside"
+        android:gravity="center"/>
+
+    <ImageButton
+        android:id="@+id/tt_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/lowerVerticalShim"
+        android:layout_toRightOf="@+id/centerHorizontalShim"
+        android:src="@drawable/tiktok"
+        android:scaleType="centerInside"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/text_presentation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/overall_progress"
+        android:layout_centerHorizontal="true"
+        android:text="@string/progress_text"
+        android:textSize="24sp"/>
+
+    <ProgressBar
+        android:id="@+id/overall_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@id/upperVerticalShim"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/usage_stats"
+        android:text=""/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/overall_progress"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:id="@+id/front_motivator"/>
+
+
+</RelativeLayout>

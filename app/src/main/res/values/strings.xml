@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SoMeSynergy</string>
+    <string name="progress_text">Your overall time spent on SoMe</string>
+    <string name="fb_progress_text">Your time spent on Facebook</string>
+    <string name="ig_progress_text">Your time spent on Instagram</string>
+    <string name="sc_progress_text">Your time spent on Snapchat</string>
+    <string name="tt_progress_text">Your time spent on TikTok</string>
+</resources>
