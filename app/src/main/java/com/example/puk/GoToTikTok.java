@@ -1,5 +1,7 @@
 package com.example.puk;
 
+import static com.example.puk.MainActivity.ttAvg;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -27,10 +29,9 @@ public class GoToTikTok extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         long time = extras.getLong("tt_time");
         int ttTimeMinute = (int) Math.round((time/1000)/60);
-        int ttAvg = 31;
         ttProgress = (ProgressBar) findViewById(R.id.tt_progress);
         // multiplying by three to account maxval = 100
-        ttProgress.setMax(31);
+        ttProgress.setMax(ttAvg);
         ttProgress.setProgress(ttTimeMinute);
 
         int[] images = {R.drawable.img01,

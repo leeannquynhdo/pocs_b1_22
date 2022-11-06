@@ -1,5 +1,7 @@
 package com.example.puk;
 
+import static com.example.puk.MainActivity.scAvg;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -27,7 +29,6 @@ public class GoToSnapchat extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         long time = extras.getLong("sc_time");
         int scTimeMinute = (int) Math.round((time/1000)/60);
-        int scAvg = 27;
         scProgress = (ProgressBar) findViewById(R.id.sc_progress);
         scProgress.setMax(scAvg);
         scProgress.setProgress(scTimeMinute);

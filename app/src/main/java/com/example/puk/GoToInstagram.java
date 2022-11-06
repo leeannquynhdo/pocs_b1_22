@@ -1,5 +1,7 @@
 package com.example.puk;
 
+import static com.example.puk.MainActivity.igAvg;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -26,7 +28,6 @@ public class GoToInstagram extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         long time = extras.getLong("ig_time");
         int igTimeMinute = (int) Math.round((time/1000)/60);
-        int igAvg = 28;
         igProgress = (ProgressBar) findViewById(R.id.ig_progress);
         igProgress.setMax(igAvg);
         igProgress.setProgress(igTimeMinute);

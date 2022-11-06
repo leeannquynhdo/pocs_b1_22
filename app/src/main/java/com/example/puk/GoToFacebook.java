@@ -1,5 +1,7 @@
 package com.example.puk;
 
+import static com.example.puk.MainActivity.fbAvg;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -27,9 +29,8 @@ public class GoToFacebook extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         long time = extras.getLong("fb_time");
         int fbTimeMinute = (int) Math.round((time/1000)/60);
-        int fbAvgTime = 33;
         fbProgress = (ProgressBar) findViewById(R.id.fb_progress);
-        fbProgress.setMax(fbAvgTime);
+        fbProgress.setMax(fbAvg);
         fbProgress.setProgress(fbTimeMinute);
 
         int[] images = {R.drawable.img01,
@@ -60,12 +61,12 @@ public class GoToFacebook extends AppCompatActivity {
         lStringBuilder.append("You have spent ");
         lStringBuilder.append(fbTimeMinute);
         lStringBuilder.append(" minutes out of the ideal ");
-        lStringBuilder.append(fbAvgTime);
+        lStringBuilder.append(fbAvg);
         lStringBuilder.append(" minutes.");
         lStringBuilder.append(System.getProperty("line.separator"));
         lStringBuilder.append(System.getProperty("line.separator"));
 
-        if (fbTimeMinute >= fbAvgTime) {
+        if (fbTimeMinute >= fbAvg) {
             lStringBuilder.append("You did it! Well done!");
             lStringBuilder.append(System.getProperty("line.separator"));
             lStringBuilder.append(System.getProperty("line.separator"));
@@ -77,7 +78,7 @@ public class GoToFacebook extends AppCompatActivity {
             lStringBuilder.append("You can do it!");
             lStringBuilder.append(System.getProperty("line.separator"));
             lStringBuilder.append("Only ");
-            lStringBuilder.append(fbAvgTime-fbTimeMinute);
+            lStringBuilder.append(fbAvg-fbTimeMinute);
             lStringBuilder.append(" minutes to go");
             lStringBuilder.append(System.getProperty("line.separator"));
             lStringBuilder.append(System.getProperty("line.separator"));

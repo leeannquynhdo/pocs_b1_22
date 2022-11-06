@@ -41,13 +41,18 @@ public class MainActivity extends AppCompatActivity{
 
     private ProgressBar overallProgressBar;
 
+    public static final int fbAvg = 33;
+    public static final int igAvg = 28;
+    public static final int scAvg = 27;
+    public static final int ttAvg = 31;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Map<String, Long> lAppUsage = fillStats();
 
-        int totalTime = 33+28+27+31;
+        int totalTime = fbAvg + igAvg + scAvg + ttAvg;
 
         long userTotalTime = 0;
         for(long l : lAppUsage.values()){
@@ -125,7 +130,7 @@ public class MainActivity extends AppCompatActivity{
 
             Calendar calendar = Calendar.getInstance();
             calendar.setTimeInMillis(System.currentTimeMillis());
-            calendar.set(Calendar.HOUR_OF_DAY, 18);
+            calendar.set(Calendar.HOUR_OF_DAY, 12);
             calendar.set(Calendar.MINUTE, 0);
             calendar.set(Calendar.SECOND, 0);
 
